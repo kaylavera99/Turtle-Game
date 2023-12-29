@@ -1,0 +1,24 @@
+Snake Representation
+
+We will represent the snake as a list of x, y coordinates:
+
+snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
+    The segments of the snake are currently all lying horizontally, with y coordinates of 0
+    Left most: tail, right most: head
+
+
+To begin:
+snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
+    1) To move, we first create a new list item for the new head:
+        new_head = snake[-1].copy()
+            snake[-1] means the rightmost item (head). It must be copied or the original would be modified by the next step
+                new_head is now [60, 0]
+    2) Next, we increment the x-coordinate of new_head with:
+        new_head[0] += 20 giving: [80, 0]
+    3) Then, we append it to the snake:
+        snake.append(new_head)
+            The snake now looks like this:
+            snake = [[0, 0], [20, 0], [40, 0], [60, 0], [80, 0]]
+
+        
+
